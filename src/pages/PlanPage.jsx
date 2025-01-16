@@ -1,6 +1,6 @@
 import React from "react";
 
-function HomePage() {
+function PlanPage() {
   return (
     <div className="p-4">
       <h1 className="pt-20 pb-16 text-4xl font-bold text-center text-accent-green">
@@ -40,4 +40,4 @@ function PlanCard({ planType, planPrice }) {
   );
 }
 
-export default HomePage;
+export default PlanPage;
