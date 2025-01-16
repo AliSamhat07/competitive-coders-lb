@@ -2,7 +2,17 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "accent-red": "#cf4657",
+        "accent-green": "#297752",
+        "accent-beige": "#FDFDEF",
+      },
+    },
+
+    fontFamily: {
+      poppins: "Poppins",
+    },
   },
   plugins: [],
 };
