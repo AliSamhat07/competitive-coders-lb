@@ -31,8 +31,7 @@ function HomePage() {
       <img className="w-7 h-7 ml-5 relative " src="./facebook_1051360.png" />
       <img className="w-7 h-7 ml-5 relative " src="./linkedin_1384088.png" />
     </div>
-
-  </div >
+  );
 }
 
 export default HomePage;
