@@ -1,18 +1,23 @@
 import React from "react";
 import NavBar from "./utils/Navbar/Navbar";
 import HoverEffect from "./utils/Arrow/Box";
+import { Link } from "react-router-dom";
 function HomePage() {
   return <div className="w-[1536px] h-[700px] relative bg-[#fdfdef]">
     <NavBar />
     <div className="flex">
       <div className="callToAction   mt-10 pt-[8%] pl-[10%] relative ">
         <div className="w-[441px] h-[143px] mt-30 mb-[15%] ml-[2vw] relative text-center text-black text-[32px] font-normal font-['Microsoft Sans Serif']">Lebanon's first and only Competitive Programming Academy </div>
-        <button
-          className="w-[296px] h-[78px] ml-[6.2vw] bg-[#cf4657] rounded-[46px] text-white text-4xl font-normal font-['Microsoft Sans Serif'] flex items-center justify-center
+        <Link to={"register"}>
+          <button
+            className="w-[296px] h-[78px] ml-[6.2vw] bg-[#cf4657] rounded-[46px] text-white text-4xl font-normal font-['Microsoft Sans Serif'] flex items-center justify-center
       transition-transform transform hover:scale-105 hover:bg-[#d85768] focus:outline-none"
-        >
-          Enroll Now
-        </button>
+          >
+            Enroll Now
+          </button>
+
+        </Link>
+
       </div>
       <div className="Boxes w-[70vw] h-[80vh] mt-10 relative">
         <div className="w-[165px] h-[22px] left-[271px] top-[77px] absolute text-center text-[#fdfdf7] text-[32px] font-normal font-['Microsoft Sans Serif'] z-10">Feel Free</div>
@@ -31,7 +36,8 @@ function HomePage() {
       <img className="w-7 h-7 ml-5 relative " src="./facebook_1051360.png" />
       <img className="w-7 h-7 ml-5 relative " src="./linkedin_1384088.png" />
     </div>
-  );
+  </div>
+    ;
 }
 
 export default HomePage;
