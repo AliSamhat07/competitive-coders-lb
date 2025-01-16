@@ -1,0 +1,56 @@
+.hover-container {
+
+    overflow: hidden;
+}
+
+.arrow-wrapper {
+
+}
+
+.arrow {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.arrow.hovered {
+    animation: arrow-diagonal-animation 1s ease-in-out;
+}
+
+@keyframes arrow-diagonal-animation {
+    0% {
+        transform: translate(0, 0);
+        /* Starts at the center */
+        opacity: 1;
+        /* Fully visible */
+    }
+
+    25% {
+        transform: translate(120px, -120px);
+        /* Moves diagonally upwards to the top-right */
+        opacity: 0;
+        /* Fully visible */
+    }
+
+    50% {
+        transform: translate(-120px, 120px);
+        /* Spawns at the bottom-left outside */
+        opacity: 0;
+        /* Transparent while spawning */
+    }
+
+    75% {
+        transform: translate(-120px, 120px);
+        /* Starting to move into view */
+        opacity: 1;
+        /* Fading back in */
+    }
+
+    100% {
+        transform: translate(0, 0);
+        /* Slides back to the center */
+        opacity: 1;
+        /* Fully visible again */
+    }
+}
