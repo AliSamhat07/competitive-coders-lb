@@ -2,7 +2,7 @@ import React from "react";
 
 function PlanPage() {
   return (
-    <div className="p-4">
+    <div className="p-4 pb-32">
       <h1 className="pt-20 pb-16 text-4xl font-bold text-center text-accent-green">
         Choose a Plan
       </h1>
