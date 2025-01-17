@@ -18,7 +18,7 @@ function Footer() {
           <img className={`${LINK}`} src={WhatsappIcon} />
         </div>
       </div>
-      <p className="pt-6 pb-6  text-md text-center">
+      <p className="pt-6 pb-6 px-2 text-md text-center">
       &copy; Copyright 2024, Competitive Coders Lb, All rights reserved.
       </p>
     </div>
