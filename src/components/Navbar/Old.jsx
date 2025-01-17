@@ -26,7 +26,7 @@ const NavBar = () => {
                         : "text-[#788183] hover:text-[#cf5768]"
                     }`}
         >
-          {item.label}
+          {item.label}  
         </Link>
       ))}
     </div>
