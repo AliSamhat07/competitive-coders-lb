@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 function PlanPage() {
   return (
     <div className="p-4 pb-32">
@@ -7,14 +7,14 @@ function PlanPage() {
         Choose a Plan
       </h1>
       <div className="flex flex-wrap gap-[6em] justify-center items-center">
-        <PlanCard planType={"Individual"} planPrice={20} />
-        <PlanCard planType={"Institution"} planPrice={10} />
+        <PlanCard planType={"Individual"} planPrice={20} planlink={"form"} />
+        <PlanCard planType={"Institution"} planPrice={10} planlink={"form"} />
       </div>
     </div>
   );
 }
 
-function PlanCard({ planType, planPrice }) {
+function PlanCard({ planType, planPrice, planlink }) {
   return (
     <section className="max-w-[400px] bg-white w-fit px-5 py-4 rounded-xl shadow-lg flex flex-col justify-center gap-4 pb-8">
       <p className="text-accent-green font-bold text-left">{planType}</p>
@@ -32,9 +32,11 @@ function PlanCard({ planType, planPrice }) {
           praesentium corporis, delectus nesciunt veritatis laborum cupiditate
           quas ducimus.
         </p>
-        <button className="mt-6 bg-accent-green hover:opacity-[0.9] transition-all   text-white font-bold text-center rounded-md w-full py-2 text">
-          Register
-        </button>
+        <Link to={planlink}>
+          <button className="mt-6 bg-accent-green hover:opacity-[0.9] transition-all   text-white font-bold text-center rounded-md w-full py-2 text">
+            Register
+          </button>
+        </Link>
       </div>
     </section>
   );
