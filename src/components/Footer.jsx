@@ -11,7 +11,7 @@ function Footer() {
   return (
     <div className="bg-accent-green flex flex-col justify-center items-center text-white mt-48 pt-8">
       <div className="flex gap-10 text-center justify-center items-center">
-        <div className=" text-center text-xl font-normal">Find us on </div>
+        <div className="text-center text-xl font-normal">Find us on </div>
         <div className="flex justify-center items-center gap-8 py-12">
           <img className={`${LINK}`} src={InstagramIcon} />
           <img className={`${LINK}`} src={LinkedInIcon} />
