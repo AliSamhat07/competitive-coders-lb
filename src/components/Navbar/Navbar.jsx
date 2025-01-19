@@ -69,17 +69,17 @@ const Navbar = () => {
       suppressHydrationWarning={true}
       id="navigation"
       ref={navigationRef}
-      className="bg-accent-beige  flex justify-center md:justify-between items-center py-10 pb-12 px-8 mx-auto  text-white"
+      className="bg-accent-beige  flex justify-center md:justify-center items-center py-10 pb-12 px-8 mx-auto  text-white"
     >
       {/* Logo */}
-
+{/* 
       <a href="/">
         <img
           src={Logo}
           alt="swift"
           className="lg:w-[100px] w-[100px] h-auto sm:mx-auto  p-0 min-h-[80px] lg:min-h-[80px] md:min-h-[60px]  mx-auto"
         />
-      </a>
+      </a> */}
 
       {/* Desktop Navigation */}
       <div className="hidden md:flex text-black font-light md:text-md lg:text-lg justify-center items-center">

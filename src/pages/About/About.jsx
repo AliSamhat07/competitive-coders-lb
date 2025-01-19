@@ -2,7 +2,7 @@ function About() {
   return (
     <div className="WrapperAbout w-[100vw] h-[100vh]">
       <div className="flex">
-        <div className="relative w-[30vw] mt-60 ml-40">
+        <div className="relative w-[30vw] text-lg mt-32 ml-40">
           {" "}
           At CC , we are passionate about transforming problem-solving into a craft. Founded by three competitive programmers with years of experience and several competition wins under our belts, our academy is built on a shared vision: to empower Lebanon's upcoming generation of thinkers and programmers.
 
