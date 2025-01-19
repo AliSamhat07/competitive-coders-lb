@@ -10,6 +10,10 @@ export default {
       },
     },
 
+    placeholderColor: {
+      primary: "#000000",
+    },
+
     fontFamily: {
       poppins: "Poppins",
     },
