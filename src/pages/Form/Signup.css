@@ -125,7 +125,7 @@
 #SignupWrapper {
     z-index: 0;
     width: fit-content;
-    height: fit-content;
+    height: 50%;
     background: rgba(239, 239, 253, 0.26);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function PlanPage() {
   return (
     <div className="p-4 pb-32">
-      <h1 className="pt-20 pb-16 text-4xl font-bold text-center text-accent-green">
+      <h1 className="pt-10 pb-16 text-4xl font-bold text-center text-accent-green">
         Choose a Plan
       </h1>
       <div className="flex flex-wrap gap-[6em] justify-center items-center">

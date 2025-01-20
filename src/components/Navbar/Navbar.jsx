@@ -41,6 +41,12 @@ const Navbar = () => {
     }
   };
 
+  const [isNav, setIsNav] = useState(location.pathname == "/register/form");
+
+  useEffect(() => {
+    setIsNav(location.pathname == "/register/form");
+  }, [location]);
+
   // Array containing navigation items
   const navItems = [
     { icon: HomeIcon, target: "/", text: "Home" },
@@ -69,10 +75,12 @@ const Navbar = () => {
       suppressHydrationWarning={true}
       id="navigation"
       ref={navigationRef}
-      className="bg-accent-beige  flex justify-center md:justify-center items-center py-10 pb-12 px-8 mx-auto  text-white"
+      className={`${
+        isNav ? "bg-accent-gray border-b border-gray-300" : "bg-accent-beige"
+      }  flex justify-center md:justify-center items-center py-10 pb-12 px-8 mx-auto  text-white`}
     >
       {/* Logo */}
-{/* 
+      {/* 
       <a href="/">
         <img
           src={Logo}
