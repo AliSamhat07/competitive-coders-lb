@@ -21,7 +21,7 @@ function Footer() {
         </div>
       </div>
       <p className="pt-6 pb-6 px-2 text-md text-center">
-        &copy; Copyright 2024, Competitive Coders Lb, All rights reserved.
+        &copy; Copyright 2025, Competitive Coders Lb, All rights reserved.
       </p>
     </div>
   );

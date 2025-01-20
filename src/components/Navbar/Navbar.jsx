@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
-import Logo from "../../assets/NavIcons/logo.svg";
+// import Logo from "../../assets/NavIcons/logo.svg";
+import Logo from "../../assets/NavIcons/cp.png";
+// import Logo from "../../assets/NavIcons/cp1.png";
 // import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 // import ServiceIcon from "../../assets/NavIcons/services-icon.svg";
 // import ContactIcon from "../../assets/NavIcons/contact-icon.svg";
@@ -43,7 +45,6 @@ const Navbar = () => {
 
   const [isNav, setIsNav] = useState(false);
 
-
   // Array containing navigation items
   const navItems = [
     { icon: HomeIcon, target: "/", text: "Home" },
@@ -74,17 +75,17 @@ const Navbar = () => {
       ref={navigationRef}
       className={`${
         isNav ? "bg-accent-gray border-b border-gray-300" : "bg-accent-beige"
-      }  flex justify-center md:justify-center items-center py-10 pb-12 px-8 mx-auto  text-white`}
+      }  flex justify-center md:justify-between items-center pb-12 px-8 mx-auto  text-white`}
     >
       {/* Logo */}
-      {/*
+
       <a href="/">
         <img
           src={Logo}
-          alt="swift"
-          className="lg:w-[100px] w-[100px] h-auto sm:mx-auto  p-0 min-h-[80px] lg:min-h-[80px] md:min-h-[60px]  mx-auto"
+          alt="cplb-logo"
+          className="lg:w-[150px] w-[100px] h-auto sm:mx-auto pt-8 p-0 min-h-[80px] lg:min-h-[80px] md:min-h-[60px]  mx-auto"
         />
-      </a> */}
+      </a>
 
       {/* Desktop Navigation */}
       <div className="hidden md:flex text-black font-light md:text-md lg:text-lg justify-center items-center">
