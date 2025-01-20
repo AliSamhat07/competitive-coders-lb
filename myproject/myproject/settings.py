@@ -78,11 +78,14 @@ WSGI_APPLICATION = "myproject.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.contrib.gis.db.backends.postgis",
+        "HOST": "dpg-cs193d5ds78s73b4egg0-a.oregon-postgres.render.com",
+        "NAME": "flutterforecastdatabase",
+        "PASSWORD": "VDokrp6s9WTm4A4omOELBHmjlZzSBAXq",
+        "PORT": 5432,
+        "USER": "flutterforecastdatabase_user",
     }
 }
 
