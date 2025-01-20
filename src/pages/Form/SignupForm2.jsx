@@ -79,8 +79,8 @@ function SignupForm2() {
           address: address,
           fullname: fullname,
           phone: phone,
-          highSchool: highSchool,
-          middleSchool: middleSchool,
+          highSchool: 0,
+          middleSchool: 0,
         })
 
     } else {
