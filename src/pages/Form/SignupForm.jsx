@@ -136,7 +136,7 @@ function SignupForm() {
                 onChange={(e) => setFullname(e.target.value)}
                 required
               />
-              <span>First name</span>
+              <span>institution name</span>
               <div className="error"></div>
             </div>
 

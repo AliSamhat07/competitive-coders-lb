@@ -123,7 +123,7 @@ function SignupForm2() {
                 onChange={(e) => setAddress(e.target.value)}
                 required
               />
-              <span className="SPANFORM">Address</span>
+              <span className="SPANFORM">First Name</span>
               <div className="error"></div>
             </div>
 
@@ -136,7 +136,7 @@ function SignupForm2() {
                 onChange={(e) => setFullname(e.target.value)}
                 required
               />
-              <span className="SPANFORM">First name</span>
+              <span className="SPANFORM">Last name</span>
               <div className="error"></div>
             </div>
 
