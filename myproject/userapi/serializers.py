@@ -26,8 +26,8 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
         }
 
     def validate_phone(self, value):
-        if len(value) < 10 or not value.isdigit():
+        if len(value) < 8 or not value.isdigit():
             raise serializers.ValidationError(
-                "Phone number must be at least 10 digits."
+                "Phone number must be at least 8 digits."
             )
         return value

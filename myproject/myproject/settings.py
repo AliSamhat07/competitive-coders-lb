@@ -81,11 +81,11 @@ WSGI_APPLICATION = "myproject.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.contrib.gis.db.backends.postgis",
-        "HOST": "dpg-cs193d5ds78s73b4egg0-a.oregon-postgres.render.com",
-        "NAME": "flutterforecastdatabase",
-        "PASSWORD": "VDokrp6s9WTm4A4omOELBHmjlZzSBAXq",
+        "HOST": "dpg-cu7akq5umphs73d4iiqg-a.oregon-postgres.render.com",
+        "NAME": "competitivecoderslbdb",
+        "PASSWORD": "Q9zpHeSuYEbw0SlwurpYpPhOIuYVHojk",
         "PORT": 5432,
-        "USER": "flutterforecastdatabase_user",
+        "USER": "competitivecoderslbdb_user",
     }
 }
 
