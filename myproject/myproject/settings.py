@@ -80,7 +80,7 @@ WSGI_APPLICATION = "myproject.wsgi.application"
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 DATABASES = {
     "default": {
-        "ENGINE": "django.contrib.gis.db.backends.postgis",
+        "ENGINE": "django.db.backends.postgresql",
         "HOST": "dpg-cu7akq5umphs73d4iiqg-a.oregon-postgres.render.com",
         "NAME": "competitivecoderslbdb",
         "PASSWORD": "Q9zpHeSuYEbw0SlwurpYpPhOIuYVHojk",
