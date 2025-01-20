@@ -17,8 +17,7 @@ function SignupForm() {
   const [fullname, setFullname] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [highSchool, setHighSchool] = useState("");
-  const [middleSchool, setMiddleSchool] = useState("");
+
   const [errorMessage, setErrorMessage] = useState(null);
 
   const navigate = useNavigate();
@@ -59,12 +58,6 @@ function SignupForm() {
     }
     if (!phone.trim()) return "Phone number is required";
     if (!isValid(phone)) return "Phone number is invalid";
-    if (!highSchool & !middleSchool) {
-      return "it is required to register some number of students";
-    } else if (highSchool < 0 || middleSchool < 0) {
-      return "can register negative number of students!!";
-
-    }
 
 
     return "Valid";
@@ -79,18 +72,22 @@ function SignupForm() {
           address: address,
           fullname: fullname,
           phone: phone,
-          highSchool: highSchool,
-          middleSchool: middleSchool,
+        
         })
 
+        .catch((error) => {
+          if (error.response.status === 403) {
+            setErrorMessage("You are already logged in!");
+            navigate("/homepage");
+          } else {
+            setErrorMessage(error.response.data.message);
+          }
+        });
     } else {
-      if (middleSchool) {
-        e.preventDefault();
-      }
+
       let ab = validate();
       if (
-        ab === "HighSchool must be at least 8 characters" ||
-        ab === "HighSchools do not match" ||
+
         ab === "Phone number is invalid" ||
         ab === "Email is invalid"
       ) {
@@ -170,31 +167,9 @@ function SignupForm() {
               <div className="error"></div>
             </div>
 
-            <div className="input-container">
-              <input
-                type="number"
-                name="user-MiddleSchool"
-                id="user-MiddleSchool"
-                className="user-MiddleSchool input"
-                onChange={(e) => setHighSchool(e.target.value)}
-                required
-              />
-              <span>Number of MiddleSchool Students</span>
-              <div className="error"></div>
-            </div>
 
-            <div className="input-container">
-              <input
-                type="number"
-                name="user-HighSchool"
-                id="user-HighSchool"
-                className="HighSchool input"
-                onChange={(e) => setMiddleSchool(e.target.value)}
-                required
-              />
-              <span>Number of HighScool Students</span>
-              <div className="error"></div>
-            </div>
+
+
 
             <div id="btm">
               <button type="submit" onClick={submit} className="submit-btn">
