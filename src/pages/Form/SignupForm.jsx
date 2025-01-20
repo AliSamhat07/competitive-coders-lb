@@ -8,7 +8,7 @@ axios.defaults.xsrfHeaderName = "X-CSRFToken";
 axios.defaults.withCredentials = true;
 
 const client = axios.create({
-  baseURL: "http://127.0.0.1:8000",
+  baseURL: "competitive-coders-lb.onrender.com",
 });
 
 function SignupForm() {
@@ -63,9 +63,7 @@ function SignupForm() {
       return "it is required to register some number of students";
     } else if (highSchool < 0 || middleSchool < 0) {
       return "can register negative number of students!!";
-
     }
-
 
     return "Valid";
   };
@@ -73,16 +71,14 @@ function SignupForm() {
   function submit(e) {
     if (validate() === "Valid") {
       e.preventDefault();
-      client
-        .post("/userapi/register", {
-          email: email,
-          address: address,
-          fullname: fullname,
-          phone: phone,
-          highSchool: highSchool,
-          middleSchool: middleSchool,
-        })
-
+      client.post("/userapi/register", {
+        email: email,
+        address: address,
+        fullname: fullname,
+        phone: phone,
+        highSchool: highSchool,
+        middleSchool: middleSchool,
+      });
     } else {
       if (middleSchool) {
         e.preventDefault();
@@ -200,13 +196,10 @@ function SignupForm() {
               <button type="submit" onClick={submit} className="submit-btn">
                 Create Account
               </button>
-         
-
-
+            </div>
           </div>
+        </form>
       </div>
-        </form >
-      </div >
     );
   }
 }

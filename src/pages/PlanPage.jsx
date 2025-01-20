@@ -10,7 +10,7 @@ function PlanPage() {
         <PlanCard
           planType={"Individual"}
           planPrice={30}
-          planlink={"form"}
+          planlink={"form2"}
           planText={
             "Unlock your potential with our individual plan! Learn, excel, and master Data Structures and Algorithms at your own pace. Whether you're preparing for interviews, honing your competitive programming skills, or just advancing your career, this plan is tailored to help you succeed."
           }

@@ -45,7 +45,6 @@ const Navbar = () => {
 
   const [isNav, setIsNav] = useState(false);
 
-
   // Array containing navigation items
   const navItems = [
     { icon: HomeIcon, target: "/", text: "Home" },
@@ -79,12 +78,11 @@ const Navbar = () => {
       }  flex justify-center md:justify-between items-center pb-12 px-8 mx-auto  text-white`}
     >
       {/* Logo */}
-      {/*
-      
+
       <a href="/">
         <img
           src={Logo}
-          alt="swift"
+          alt="cplb-logo"
           className="lg:w-[150px] w-[100px] h-auto sm:mx-auto pt-8 p-0 min-h-[80px] lg:min-h-[80px] md:min-h-[60px]  mx-auto"
         />
       </a>
