@@ -11,7 +11,7 @@ const client = axios.create({
   baseURL: "http://127.0.0.1:8000",
 });
 
-function SignupForm() {
+function SignupForm2() {
   const [currentUser, setCurrentUser] = useState(null);
   const [address, setAddress] = useState("");
   const [fullname, setFullname] = useState("");
@@ -127,7 +127,7 @@ function SignupForm() {
                 onChange={(e) => setAddress(e.target.value)}
                 required
               />
-              <span>Address</span>
+              <span className="SPANFORM">Address</span>
               <div className="error"></div>
             </div>
 
@@ -140,7 +140,7 @@ function SignupForm() {
                 onChange={(e) => setFullname(e.target.value)}
                 required
               />
-              <span>First name</span>
+              <span className="SPANFORM">First name</span>
               <div className="error"></div>
             </div>
 
@@ -170,45 +170,19 @@ function SignupForm() {
               <div className="error"></div>
             </div>
 
-            <div className="input-container">
-              <input
-                type="number"
-                name="user-MiddleSchool"
-                id="user-MiddleSchool"
-                className="user-MiddleSchool input"
-                onChange={(e) => setHighSchool(e.target.value)}
-                required
-              />
-              <span className="SPANFORM">Number of MiddleSchool Students</span>
-              <div className="error"></div>
-            </div>
 
-            <div className="input-container">
-              <input
-                type="number"
-                name="user-HighSchool"
-                id="user-HighSchool"
-                className="HighSchool input"
-                onChange={(e) => setMiddleSchool(e.target.value)}
-                required
-              />
-              <span className="SPANFORM">Number of HighScool Students</span>
-              <div className="error"></div>
-            </div>
 
             <div id="btm">
               <button type="submit" onClick={submit} className="submit-btn">
                 Create Account
               </button>
-         
 
-
+            </div>
           </div>
+        </form>
       </div>
-        </form >
-      </div >
     );
   }
 }
 
-export default SignupForm;
+export default SignupForm2;
