@@ -1,7 +1,7 @@
 function Events() {
   return (
     <div className="WrapperEvents w-[100vw] min-h-screen  bg-[#fdfdef]">
-      <div className="flex flex-wrap w-full  ">
+      {/* <div className="flex flex-wrap w-full  ">
         <div className=" w-[20%] aspect-[5/6] relative mt-10 ml-10 bg-white border-2 rounded-[46px] overflow-hidden">
           <img
             className="h-[50%] w-[100%] object-cover"
@@ -83,7 +83,8 @@ function Events() {
             Lorem Ipsum is simply dummy text of the printing and typesetting{" "}
           </div>
         </div>
-      </div>
+      </div> */}
+      <p className="text-center mt-12 text-xl text-gray-500">Coming soon...</p>
     </div>
   );
 }
