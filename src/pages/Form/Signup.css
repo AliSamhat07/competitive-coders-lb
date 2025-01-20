@@ -182,7 +182,7 @@
         width: 100%;
         gap: 45px;
         padding: 0;
-        color: rgba(255, 255, 255, .5);
+        color: var(--form-txt);
     }
 
     .mobile-btm-nav {
@@ -387,7 +387,7 @@
         width: 100%;
         gap: 45px;
         padding: 0;
-        color: rgba(255, 255, 255, .5);
+        color: var(--form-txt);
     }
 
     .mobile-btm-nav {
@@ -581,6 +581,30 @@
         transform: scale(1);
     }
 
+    #l-name {
+        width: 50%;
+        margin-left: 24%;
+    }
+
+    #f-name {
+        width: 50%;
+        margin-left: 24%;
+    }
+
+    #mail {
+        width: 50%;
+        margin-left: 24%;
+    }
+
+    #phone {
+        width: 50%;
+        margin-left: 24%;
+    }
+
+    .SPANFORM {
+        margin-left: 24%;
+    }
+
     .quote {
         margin-top: -50px;
     }
@@ -614,7 +638,7 @@
         width: 100%;
         gap: 45px;
         padding: 0;
-        color: rgba(255, 255, 255, .5);
+        color: var(--form-txt);
     }
 
     .mobile-btm-nav {
@@ -819,7 +843,7 @@
         width: 100%;
         gap: 45px;
         padding: 0;
-        color: rgba(255, 255, 255, .5);
+        color: var(--form-txt);
     }
 
     .mobile-btm-nav {

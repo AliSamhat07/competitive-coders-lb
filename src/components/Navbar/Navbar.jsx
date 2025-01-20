@@ -17,7 +17,7 @@ import {
 } from "./NavIcons";
 import { useLocation, Link } from "react-router-dom";
 
-const LINK = `whitespace-nowrap font-lexend text-center relative inline-block 
+const LINK = `whitespace-nowrap font-lexend text-center relative inline-block
   text-xl px-4 py-1 transition-colors duration-200`;
 
 const Navbar = () => {
@@ -41,11 +41,8 @@ const Navbar = () => {
     }
   };
 
-  const [isNav, setIsNav] = useState(location.pathname == "/register/form");
+  const [isNav, setIsNav] = useState(false);
 
-  useEffect(() => {
-    setIsNav(location.pathname == "/register/form");
-  }, [location]);
 
   // Array containing navigation items
   const navItems = [
@@ -80,7 +77,7 @@ const Navbar = () => {
       }  flex justify-center md:justify-center items-center py-10 pb-12 px-8 mx-auto  text-white`}
     >
       {/* Logo */}
-      {/* 
+      {/*
       <a href="/">
         <img
           src={Logo}

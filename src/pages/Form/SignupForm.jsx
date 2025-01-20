@@ -153,7 +153,7 @@ function SignupForm() {
                 onChange={(e) => setEmail(e.target.value)}
                 required
               />
-              <span>E-mail</span>
+              <span className="SPANFORM">E-mail</span>
               <div className="error"></div>
             </div>
 
@@ -166,7 +166,7 @@ function SignupForm() {
                 onChange={(e) => setPhone(e.target.value)}
                 required
               />
-              <span>Phone</span>
+              <span className="SPANFORM">Phone</span>
               <div className="error"></div>
             </div>
 
@@ -179,7 +179,7 @@ function SignupForm() {
                 onChange={(e) => setHighSchool(e.target.value)}
                 required
               />
-              <span>Number of MiddleSchool Students</span>
+              <span className="SPANFORM">Number of MiddleSchool Students</span>
               <div className="error"></div>
             </div>
 
@@ -192,7 +192,7 @@ function SignupForm() {
                 onChange={(e) => setMiddleSchool(e.target.value)}
                 required
               />
-              <span>Number of HighScool Students</span>
+              <span className="SPANFORM">Number of HighScool Students</span>
               <div className="error"></div>
             </div>
 
@@ -200,18 +200,13 @@ function SignupForm() {
               <button type="submit" onClick={submit} className="submit-btn">
                 Create Account
               </button>
-              <p className="btm-text">
-                Already have an account..?{" "}
-                <span className="btm-text-highlighted">
-                  <a className="btm-text-highlighted" href="login">
-                    Log in
-                  </a>
-                </span>
-              </p>
-            </div>
+         
+
+
           </div>
-        </form>
       </div>
+        </form >
+      </div >
     );
   }
 }

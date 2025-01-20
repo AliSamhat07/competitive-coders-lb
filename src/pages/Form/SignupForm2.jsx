@@ -11,13 +11,14 @@ const client = axios.create({
   baseURL: "http://127.0.0.1:8000",
 });
 
-function SignupForm() {
+function SignupForm2() {
   const [currentUser, setCurrentUser] = useState(null);
   const [address, setAddress] = useState("");
   const [fullname, setFullname] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-
+  const [highSchool, setHighSchool] = useState("");
+  const [middleSchool, setMiddleSchool] = useState("");
   const [errorMessage, setErrorMessage] = useState(null);
 
   const navigate = useNavigate();
@@ -58,6 +59,12 @@ function SignupForm() {
     }
     if (!phone.trim()) return "Phone number is required";
     if (!isValid(phone)) return "Phone number is invalid";
+    if (!highSchool & !middleSchool) {
+      return "it is required to register some number of students";
+    } else if (highSchool < 0 || middleSchool < 0) {
+      return "can register negative number of students!!";
+
+    }
 
 
     return "Valid";
@@ -72,22 +79,18 @@ function SignupForm() {
           address: address,
           fullname: fullname,
           phone: phone,
-        
+          highSchool: highSchool,
+          middleSchool: middleSchool,
         })
 
-        .catch((error) => {
-          if (error.response.status === 403) {
-            setErrorMessage("You are already logged in!");
-            navigate("/homepage");
-          } else {
-            setErrorMessage(error.response.data.message);
-          }
-        });
     } else {
-
+      if (middleSchool) {
+        e.preventDefault();
+      }
       let ab = validate();
       if (
-
+        ab === "HighSchool must be at least 8 characters" ||
+        ab === "HighSchools do not match" ||
         ab === "Phone number is invalid" ||
         ab === "Email is invalid"
       ) {
@@ -124,7 +127,7 @@ function SignupForm() {
                 onChange={(e) => setAddress(e.target.value)}
                 required
               />
-              <span>Address</span>
+              <span className="SPANFORM">Address</span>
               <div className="error"></div>
             </div>
 
@@ -137,7 +140,7 @@ function SignupForm() {
                 onChange={(e) => setFullname(e.target.value)}
                 required
               />
-              <span>First name</span>
+              <span className="SPANFORM">First name</span>
               <div className="error"></div>
             </div>
 
@@ -150,7 +153,7 @@ function SignupForm() {
                 onChange={(e) => setEmail(e.target.value)}
                 required
               />
-              <span>E-mail</span>
+              <span className="SPANFORM">E-mail</span>
               <div className="error"></div>
             </div>
 
@@ -163,11 +166,9 @@ function SignupForm() {
                 onChange={(e) => setPhone(e.target.value)}
                 required
               />
-              <span>Phone</span>
+              <span className="SPANFORM">Phone</span>
               <div className="error"></div>
             </div>
-
-
 
 
 
@@ -175,14 +176,7 @@ function SignupForm() {
               <button type="submit" onClick={submit} className="submit-btn">
                 Create Account
               </button>
-              <p className="btm-text">
-                Already have an account..?{" "}
-                <span className="btm-text-highlighted">
-                  <a className="btm-text-highlighted" href="login">
-                    Log in
-                  </a>
-                </span>
-              </p>
+
             </div>
           </div>
         </form>
@@ -191,4 +185,4 @@ function SignupForm() {
   }
 }
 
-export default SignupForm;
+export default SignupForm2;

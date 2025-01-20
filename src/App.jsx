@@ -5,11 +5,9 @@ import { useEffect, useState } from "react";
 
 function App() {
   const location = useLocation()
-  const [isNav, setIsNav] = useState(location.pathname == "/register/form");
+  const [isNav, setIsNav] = useState(false);
 
-  useEffect(() => {
-    setIsNav(location.pathname == "/register/form");
-  }, [location]);
+
   return (
     <div className={`font-poppins ${isNav ? 'bg-accent-gray' : 'bg-accent-beige'}`}>
       <NavBar />

@@ -34,7 +34,7 @@ function HomePage() {
         <div className="hover:cursor-pointer hover:opacity-[60%] transition-all duratoin-[100ms] w-60 h-[58px] left-[243px] top-[119px] absolute text-center text-white text-4xl font-normal z-10" onClick={handleContact}>
           Contact Us{" "}
         </div>
-        {/* <HoverEffect /> */}
+        <HoverEffect />
         <div className="w-[274px] h-[317px] left-[230px] top-[45px] absolute bg-[#cf4657] rounded-[44px]" />
         <div className="w-[300px] h-[343px] left-[217px] top-[32px] absolute bg-[#fe8040]/0 rounded-[44px] border border-black" />
         <div className="w-[373px] h-[415px] left-[410px] top-[163px] absolute bg-[#fdfdef] rounded-[44px]" />

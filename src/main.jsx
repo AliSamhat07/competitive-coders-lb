@@ -13,12 +13,14 @@ import PlanPage from "./pages/PlanPage.jsx";
 import SignUp from "./pages/Form/Signup.jsx";
 import About from "./pages/About/About.jsx";
 import Events from "./pages/Events/Events.jsx";
+import Signup2 from "./pages/Form/Signup2.jsx";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route path="/" element={<HomePage />} index={true} />
       <Route path="/register" element={<PlanPage />} />
       <Route path="register/form" element={<SignUp />} />
+      <Route path="register/form2" element={<Signup2 />} />
       <Route path="/About" element={<About />} />
       <Route path="/Events" element={<Events />} />
 
