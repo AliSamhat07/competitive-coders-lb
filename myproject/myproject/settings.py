@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-2=f7@gpvl+#e)1ko9ebx!cx5!%kqy6nwc2^@7mia!f=cl6o$0i
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*", "competitive-coders-lb.onrender.com"]
 
 
 # Application definition
@@ -51,10 +51,10 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    'corsheaders.middleware.CorsMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
 ]
 
-CORS_ALLOW_ALL_ORIGINS = True 
+CORS_ALLOW_ALL_ORIGINS = True
 ROOT_URLCONF = "myproject.urls"
 
 TEMPLATES = [
@@ -78,11 +78,14 @@ WSGI_APPLICATION = "myproject.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.contrib.gis.db.backends.postgis",
+        "HOST": "dpg-cs193d5ds78s73b4egg0-a.oregon-postgres.render.com",
+        "NAME": "flutterforecastdatabase",
+        "PASSWORD": "VDokrp6s9WTm4A4omOELBHmjlZzSBAXq",
+        "PORT": 5432,
+        "USER": "flutterforecastdatabase_user",
     }
 }
 
