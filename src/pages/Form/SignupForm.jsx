@@ -23,25 +23,7 @@ function SignupForm() {
 
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const performNavigate = async () => {
-      try {
-        await client
-          .get("/userapi/user")
-          .then(() => {
-            setCurrentUser(true);
-            navigate("/homepage");
-          })
-          .catch(() => {
-            setCurrentUser(false);
-          });
-      } catch (error) {
-        console.error("Error logging out:", error);
-      }
-    };
 
-    performNavigate();
-  }, [navigate]);
 
   function isValid(p) {
     var phoneRe = /^[\s()+-]*([0-9][\s()+-]*){6,20}$/;
@@ -194,7 +176,7 @@ function SignupForm() {
 
             <div id="btm">
               <button type="submit" onClick={submit} className="submit-btn">
-                Create Account
+                Register
               </button>
             </div>
           </div>
