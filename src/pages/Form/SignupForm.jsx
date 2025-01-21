@@ -5,10 +5,9 @@ import axios from "axios";
 
 axios.defaults.xsrfCookieName = "csrftoken";
 axios.defaults.xsrfHeaderName = "X-CSRFToken";
-axios.defaults.withCredentials = true;
 
 const client = axios.create({
-  baseURL: "competitive-coders-lb.onrender.com",
+  baseURL: "https://competitive-coders-lb.onrender.com",
 });
 
 function SignupForm() {
@@ -26,7 +25,6 @@ function SignupForm() {
 
 
   function isValid(p) {
-    var phoneRe = /^[\s()+-]*([0-9][\s()+-]*){6,20}$/;
     var digits = p.replace(/\D/g, "");
     return phoneRe.test(digits);
   }
@@ -105,7 +103,7 @@ function SignupForm() {
                 onChange={(e) => setAddress(e.target.value)}
                 required
               />
-              <span>Address</span>
+              <span className="SPANFORM">Address</span>
               <div className="error"></div>
             </div>
 
@@ -118,7 +116,7 @@ function SignupForm() {
                 onChange={(e) => setFullname(e.target.value)}
                 required
               />
-              <span>institution name</span>
+              <span className="SPANFORM">institution name</span>
               <div className="error"></div>
             </div>
 

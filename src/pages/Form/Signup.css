@@ -142,6 +142,7 @@
       */
     .App2 {
         width: 100%;
+        height: 140vh;
         overflow: visible;
     }
 
@@ -347,7 +348,12 @@
       */
     .App2 {
         width: 100%;
+        height: 140vh;
         overflow: visible;
+    }
+
+    .submit-btn {
+        margin-bottom: 10%;
     }
 
     .image-container>[class] {
@@ -574,7 +580,12 @@
     */
     .App2 {
         width: 100%;
+        height: 140vh;
         overflow: visible;
+    }
+
+    .submit-btn {
+        margin-bottom: 10%;
     }
 
     .image-container>[class] {
@@ -601,8 +612,21 @@
         margin-left: 24%;
     }
 
-    .SPANFORM {
+    #user-HighSchool {
+        width: 50%;
         margin-left: 24%;
+    }
+
+    #user-MiddleSchool {
+        width: 50%;
+        margin-left: 24%;
+    }
+
+    .SPANFORM {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        display: flex;
     }
 
     .quote {
@@ -803,7 +827,8 @@
     */
     .App2 {
         width: 100%;
-        overflow: visible;
+        height: 140vh;
+        overflow: hidden;
     }
 
     .image-container>[class] {

@@ -1,14 +1,12 @@
 import "./Signup.css";
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 axios.defaults.xsrfCookieName = "csrftoken";
 axios.defaults.xsrfHeaderName = "X-CSRFToken";
-axios.defaults.withCredentials = true;
 
 const client = axios.create({
-  baseURL: "competitive-coders-lb.onrender.com",
+  baseURL: "https://competitive-coders-lb.onrender.com",
 });
 
 function SignupForm2() {
@@ -21,12 +19,10 @@ function SignupForm2() {
   const [middleSchool, setMiddleSchool] = useState("");
   const [errorMessage, setErrorMessage] = useState(null);
 
-  const navigate = useNavigate();
 
 
 
   function isValid(p) {
-    var phoneRe = /^[\s()+-]*([0-9][\s()+-]*){6,20}$/;
     var digits = p.replace(/\D/g, "");
     return phoneRe.test(digits);
   }
@@ -41,9 +37,7 @@ function SignupForm2() {
     }
     if (!phone.trim()) return "Phone number is required";
     if (!isValid(phone)) return "Phone number is invalid";
-    if (!highSchool & !middleSchool) {
-      return "it is required to register some number of students";
-    } else if (highSchool < 0 || middleSchool < 0) {
+    else if (highSchool < 0 || middleSchool < 0) {
       return "can register negative number of students!!";
     }
 
@@ -51,32 +45,17 @@ function SignupForm2() {
   };
 
   function submit(e) {
-    if (validate() === "Valid") {
-      e.preventDefault();
-      client.post("/userapi/register", {
-        email: email,
-        address: address,
-        fullname: fullname,
-        phone: phone,
-        highSchool: 0,
-        middleSchool: 0,
-      });
-    } else {
-      if (middleSchool) {
-        e.preventDefault();
-      }
-      let ab = validate();
-      if (
-        ab === "HighSchool must be at least 8 characters" ||
-        ab === "HighSchools do not match" ||
-        ab === "Phone number is invalid" ||
-        ab === "Email is invalid"
-      ) {
-        setErrorMessage(ab);
-      } else {
-        setErrorMessage("");
-      }
-    }
+
+    e.preventDefault();
+    client.post("/userapi/register", {
+      email: email,
+      address: address,
+      fullname: fullname,
+      phone: parseInt(phone, 10),
+      highSchool: 0,
+      middleSchool: 0,
+    });
+
   }
 
   if (!currentUser) {
