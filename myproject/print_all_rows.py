@@ -7,6 +7,7 @@ os.environ.setdefault(
     "DJANGO_SETTINGS_MODULE", "myproject.settings"
 )  # Replace 'your_project_name' with your actual project name
 django.setup()
+from django.forms.models import model_to_dict
 
 
 def print_all_rows():
@@ -21,7 +22,7 @@ def print_all_rows():
 
             if rows.exists():
                 for row in rows:
-                    print(row)
+                    print(model_to_dict(row))
             else:
                 print("No data found.")
         except Exception as e:
@@ -29,5 +30,4 @@ def print_all_rows():
         print("-" * 40)
 
 
-if __name__ == "__main__":
-    print_all_rows()
+print_all_rows()
