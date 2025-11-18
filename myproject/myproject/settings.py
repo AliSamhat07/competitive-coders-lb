@@ -80,12 +80,16 @@ WSGI_APPLICATION = "myproject.wsgi.application"
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "HOST": "dpg-cu7akq5umphs73d4iiqg-a.oregon-postgres.render.com",
-        "NAME": "competitivecoderslbdb",
-        "PASSWORD": "Q9zpHeSuYEbw0SlwurpYpPhOIuYVHojk",
-        "PORT": 5432,
-        "USER": "competitivecoderslbdb_user",
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": "u407269243_CCLB_DATA",
+        "USER": "u407269243_3ammak",
+        "PASSWORD": "mawbag-8nuwfa-bytFex",
+        "HOST": "auth-db1802.hstgr.io",
+        "PORT": "3306",
+        "OPTIONS": {
+            "charset": "utf8mb4",
+            "init_command": "SET sql_mode='STRICT_TRANS_TABLES'",
+        }
     }
 }
 
