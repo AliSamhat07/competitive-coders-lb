@@ -8,7 +8,7 @@ axios.defaults.xsrfCookieName = "csrftoken";
 axios.defaults.xsrfHeaderName = "X-CSRFToken";
 
 const client = axios.create({
-  baseURL: "https://competitive-coders-lb.onrender.com",
+  baseURL: "http://localhost:8000",
 });
 
 function SignupForm2() {
@@ -17,6 +17,8 @@ function SignupForm2() {
   const [fullname, setFullname] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [highSchool, setHighSchool] = useState("");
   const [middleSchool, setMiddleSchool] = useState("");
   const [errorMessage, setErrorMessage] = useState(null);
@@ -31,7 +33,7 @@ function SignupForm2() {
 
   const validate = () => {
     if (!address.trim()) return "First name is required";
-    if (!fullname.trim()) return "last name is required";
+    if (!fullname.trim()) return "Last name is required";
     if (!email.trim()) {
       return "Email is required";
     } else if (!/\S+@\S+\.\S+/.test(email)) {
@@ -39,7 +41,10 @@ function SignupForm2() {
     }
     if (!phone.trim()) return "Phone number is required";
     if (!isValid(phone)) return "Phone number is invalid";
-    else if (highSchool < 0 || middleSchool < 0) {
+    if (!password.trim()) return "Password is required";
+    if (password.length < 6) return "Password must be at least 6 characters";
+    if (password !== confirmPassword) return "Passwords do not match";
+    if (highSchool < 0 || middleSchool < 0) {
       return "Cannot register negative number of students!";
     }
 
@@ -62,9 +67,11 @@ function SignupForm2() {
         email: email,
         address: address,
         fullname: fullname,
-        phone: parseInt(phone, 10),
-        highSchool: 0,
-        middleSchool: 0,
+        phone: phone,
+        password: password,
+        confirm_password: confirmPassword,
+        high_school: parseInt(highSchool) || 0,
+        middle_school: parseInt(middleSchool) || 0,
       })
       .then((response) => {
         console.log("Registration successful:", response.data);
@@ -73,7 +80,7 @@ function SignupForm2() {
       })
       .catch((error) => {
         console.error("Error during registration:", error);
-        setErrorMessage("Registration failed. Please try again.");
+        setErrorMessage(error.response?.data?.error || "Registration failed. Please try again.");
       });
   }
 
@@ -139,6 +146,30 @@ function SignupForm2() {
               required
             />
             <span className="SPANFORM">Phone</span>
+          </div>
+
+          <div className="input-container">
+            <input
+              className="input"
+              type="password"
+              name="password"
+              id="password"
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+            <span className="SPANFORM">Password</span>
+          </div>
+
+          <div className="input-container">
+            <input
+              className="input"
+              type="password"
+              name="confirm-password"
+              id="confirm-password"
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              required
+            />
+            <span className="SPANFORM">Confirm Password</span>
           </div>
 
           <div id="btm">

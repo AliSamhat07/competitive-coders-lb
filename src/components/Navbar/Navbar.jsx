@@ -75,7 +75,7 @@ const Navbar = () => {
       ref={navigationRef}
       className={`${
         isNav ? "bg-accent-gray border-b border-gray-300" : "bg-accent-beige"
-      }  flex justify-center md:justify-between items-center pb-12 px-8 mx-auto  text-white`}
+      }  flex justify-center md:justify-between items-center px-8 mx-auto  text-white`}
     >
       {/* Logo */}
 

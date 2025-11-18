@@ -214,6 +214,8 @@
         gap: 45px;
         padding: 0;
         color: var(--form-txt);
+        background-color:rgba(255, 255, 255, 0);
+
     }
 
     .mobile-btm-nav {
@@ -290,6 +292,8 @@
     gap: 45px;
     padding: 50px;
     color: var(--form-txt);
+    background-color:rgba(255, 255, 255, 0);
+
 }
 
 .form-header {
@@ -424,6 +428,8 @@
         gap: 45px;
         padding: 0;
         color: var(--form-txt);
+        background-color:rgba(255, 255, 255, 0);
+
     }
 
     .mobile-btm-nav {
@@ -693,6 +699,7 @@
         gap: 45px;
         padding: 0;
         color: var(--form-txt);
+        background-color:rgba(255, 255, 255, 0);
     }
 
     .mobile-btm-nav {
@@ -769,6 +776,8 @@
     gap: 45px;
     padding: 50px;
     color: var(--form-txt);
+    background-color:rgba(255, 255, 255, 0);
+
 }
 
 .form-header {
@@ -899,6 +908,8 @@
         gap: 45px;
         padding: 0;
         color: var(--form-txt);
+        background-color:rgba(255, 255, 255, 0);
+
     }
 
     .mobile-btm-nav {

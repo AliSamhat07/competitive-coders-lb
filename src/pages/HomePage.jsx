@@ -11,7 +11,12 @@ function HomePage() {
   };
   return (
     <div className="relative mx-auto flex justify-center items-start pb-32">
-      <div className="callToAction flex justify-start gap-12  mt-24 items-center flex-col relative px-8 lg:px-0 lg:pl-32 w-full xl:w-[40%]">
+      <div className="
+    callToAction 
+    flex justify-start gap-12 mt-24 items-center flex-col 
+    relative px-8 lg:px-0 lg:pl-32 w-full xl:w-[40%]
+    lg:translate-x-[6vw] lg:translate-y-[2vw]
+  ">
         <div className=" relative text-center text-black font-semibold text-[2.5em] leading-[1.5em]">
           Lebanon's <span className="text-accent-gree">first</span> and{" "}
           <span className="text-accent-gren">only</span> Competitive Programming
@@ -27,7 +32,7 @@ function HomePage() {
         </Link>
       </div>
 
-      <div className="Boxes w-[65%] h-[80vh] mt-10 relative hidden xl:block">
+      <div className="Boxes w-[65%] h-[80vh] mt-10 relative hidden xl:block lg:translate-x-[0vw] lg:translate-y-[-2vw]">
         <div className="w-[165px] h-[22px] left-[271px] top-[77px] absolute text-center text-[#fdfdf7] text-[32px] font-normal z-10">
           Feel Free
         </div>

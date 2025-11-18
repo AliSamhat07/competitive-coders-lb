@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-2=f7@gpvl+#e)1ko9ebx!cx5!%kqy6nwc2^@7mia!f=cl6o$0i
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*", "competitive-coders-lb.onrender.com"]
+ALLOWED_HOSTS = ["*", "competitive-coders-lb.onrender.com", "localhost", "127.0.0.1"]
 
 
 # Application definition
@@ -55,6 +55,11 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "https://localhost:3000",
+]
 ROOT_URLCONF = "myproject.urls"
 
 TEMPLATES = [
