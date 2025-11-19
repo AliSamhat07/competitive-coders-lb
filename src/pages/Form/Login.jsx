@@ -4,7 +4,7 @@ import axios from "axios";
 import "./Login.css";
 
 const client = axios.create({
-  baseURL: "http://localhost:8000",
+  baseURL: "http://api.competitivecoderlb.com",
 });
 
 function Login() {

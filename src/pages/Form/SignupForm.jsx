@@ -8,7 +8,7 @@ axios.defaults.xsrfHeaderName = "X-CSRFToken";
 const phoneRe = /^[0-9]{8,15}$/;
 
 const client = axios.create({
-  baseURL: "https://competitive-coders-lb.onrender.com",
+  baseURL: "http://api.competitivecoderlb.com",
 });
 
 function SignupForm() {

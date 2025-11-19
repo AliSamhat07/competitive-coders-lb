@@ -8,7 +8,7 @@ axios.defaults.xsrfCookieName = "csrftoken";
 axios.defaults.xsrfHeaderName = "X-CSRFToken";
 
 const client = axios.create({
-  baseURL: "http://localhost:8000",
+  baseURL: "http://api.competitivecoderlb.com",
 });
 
 function SignupForm2() {
